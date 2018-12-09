@@ -1,0 +1,59 @@
+---
+title: "data analytics"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+cg1 <- read.csv("cg1-acc.csv",header = TRUE)
+lili1 <- read.csv("lili1-acc.csv",header = TRUE)
+mary1 <- read.csv("mary1-acc.csv",header = TRUE)
+eli1 <- read.csv("eli1-acc.csv",header = TRUE)
+karen1 <- read.csv("karen1-acc.csv",header = TRUE)
+yipu1 <- read.csv("yipu1-acc.csv",header = TRUE)
+cg1_plot <- ggplot(cg1, aes(time_tick)) + 
+  geom_line(aes(y = acc_X_value, colour = "X")) + 
+  geom_line(aes(y = acc_Y_value, colour = "Y")) +
+  geom_line(aes(y = acc_Z_value, colour = "Z")) +
+  ggtitle("Cg 1st time") 
+cg1_plot
+
+
+lili1_plot <- ggplot(lili1, aes(time_tick)) + 
+  geom_line(aes(y = acc_X_value, colour = "X")) + 
+  geom_line(aes(y = acc_Y_value, colour = "Y")) +
+  geom_line(aes(y = acc_Z_value, colour = "Z")) +
+  ggtitle("Lili 1st time") 
+lili1_plot
+
+yipu1_plot <- ggplot(yipu1, aes(time_tick)) + 
+  geom_line(aes(y = acc_X_value, colour = "X")) + 
+  geom_line(aes(y = acc_Y_value, colour = "Y")) +
+  geom_line(aes(y = acc_Z_value, colour = "Z")) +
+  ggtitle("Yipu 1st time") 
+yipu1_plot
+
+mary1_plot <- ggplot(mary1, aes(time_tick)) + 
+  geom_line(aes(y = acc_X_value, colour = "X")) + 
+  geom_line(aes(y = acc_Y_value, colour = "Y")) +
+  geom_line(aes(y = acc_Z_value, colour = "Z")) +
+  ggtitle("Mary 1st time") 
+mary1_plot
+
+karen1_plot <- ggplot(karen1, aes(time_tick)) + 
+  geom_line(aes(y = acc_X_value, colour = "X")) + 
+  geom_line(aes(y = acc_Y_value, colour = "Y")) +
+  geom_line(aes(y = acc_Z_value, colour = "Z")) +
+  ggtitle("Karen 1st time") 
+karen1_plot
+
+eli1_plot <- ggplot(eli1, aes(time_tick)) + 
+  geom_line(aes(y = acc_X_value, colour = "X-left-right")) + 
+  geom_line(aes(y = acc_Y_value, colour = "Y-forward-backward")) +
+  geom_line(aes(y = acc_Z_value, colour = "Z-up-down")) +
+  ggtitle("Eli 1st time") 
+eli1_plot
+
+
+```
+
